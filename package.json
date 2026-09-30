@@ -7,6 +7,6 @@
     "install:azure": "npm install @azure/service-bus"
   },
   "dependencies": {
-    "@azure/service-bus": "^7.10.0"
+    "@azure/service-bus": "^7.9.5"
   }
 }
