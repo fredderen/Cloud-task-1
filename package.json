@@ -1,0 +1,12 @@
+{
+  "name": "spar-collection-service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SPAR Collection Service Azure Function example",
+  "scripts": {
+    "install:azure": "npm install @azure/service-bus"
+  },
+  "dependencies": {
+    "@azure/service-bus": "^7.10.0"
+  }
+}
