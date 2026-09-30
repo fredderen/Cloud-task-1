@@ -1,0 +1,41 @@
+{
+  "eventType": "collection.completed",
+  "version": 1,
+  "correlationId": "6f1f1d0e-2f90-4ce1-bf6e-d870e2b3a0d9",
+  "listId": "LIST-1042",
+  "customerName": "Mr. Larsen",
+  "submittedAt": "2026-09-30T11:42:00Z",
+  "status": "COMPLETED",
+  "summary": {
+    "totalItems": 8,
+    "collectedCount": 5,
+    "unavailableCount": 1,
+    "completionPercent": 63
+  },
+  "items": [
+    {
+      "itemId": "A1",
+      "productName": "Whole Milk",
+      "productCategory": "Dairy",
+      "quantity": 2,
+      "status": "collected",
+      "recordedAt": "2026-09-30T11:42:00Z"
+    },
+    {
+      "itemId": "A2",
+      "productName": "Brown Bread",
+      "productCategory": "Bakery",
+      "quantity": 1,
+      "status": "collected",
+      "recordedAt": "2026-09-30T11:42:00Z"
+    },
+    {
+      "itemId": "A4",
+      "productName": "Apples",
+      "productCategory": "Fruit",
+      "quantity": 4,
+      "status": "unavailable",
+      "recordedAt": "2026-09-30T11:42:00Z"
+    }
+  ]
+}

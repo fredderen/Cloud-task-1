@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPAR Collection Service</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-area">
+          <div class="brand-mark">S</div>
+          <div>
+            <p class="brand-name">SPAR</p>
+            <small>Collection Service</small>
+          </div>
+        </div>
+
+        <div class="employee-card">
+          <div>
+            <p class="eyebrow">Signed in</p>
+            <h3>Lucy Novak</h3>
+          </div>
+          <span class="role-badge">Store Lead</span>
+        </div>
+
+        <div class="nav-section">
+          <div class="section-head">
+            <span>Active lists</span>
+            <span class="section-count" id="listCountBadge">0</span>
+          </div>
+          <div id="listOverview" class="list-overview" aria-live="polite"></div>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Store 02 · Shift A</p>
+            <h1 id="storeTitle">Collection queue</h1>
+          </div>
+
+          <div class="status-controls">
+            <span id="connectionBadge" class="status-pill online">Online</span>
+            <span id="syncBadge" class="status-pill synced">Synced</span>
+          </div>
+        </header>
+
+        <div id="offlineBanner" class="offline-banner hidden" role="status">
+          Offline mode active. Changes will sync automatically when the tablet reconnects.
+        </div>
+
+        <section class="detail-header">
+          <div>
+            <p class="eyebrow">Current collection</p>
+            <h2 id="activeListTitle">Loading list...</h2>
+          </div>
+
+          <div class="action-group">
+            <button id="toggleConnectionBtn" class="secondary-btn" type="button">Set offline</button>
+            <button id="completeCollectionBtn" class="primary-btn" type="button">Complete collection</button>
+          </div>
+        </section>
+
+        <section class="metric-grid" aria-label="Collection metrics">
+          <article class="metric-card">
+            <p>Total items</p>
+            <h3 id="metricTotal">0</h3>
+          </article>
+          <article class="metric-card success">
+            <p>Collected</p>
+            <h3 id="metricCollected">0</h3>
+          </article>
+          <article class="metric-card warning">
+            <p>Unavailable</p>
+            <h3 id="metricUnavailable">0</h3>
+          </article>
+          <article class="metric-card neutral">
+            <p>Pending sync</p>
+            <h3 id="metricPendingSync">0</h3>
+          </article>
+        </section>
+
+        <section class="list-table-panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">List contents</p>
+              <h3 id="listSubheading">Shopping list items</h3>
+            </div>
+            <div class="progress-wrap">
+              <span>Progress</span>
+              <div class="progress-track">
+                <div id="progressBar" class="progress-bar"></div>
+              </div>
+              <strong id="progressPercent">0%</strong>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Qty</th>
+                  <th>Category</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="itemTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
